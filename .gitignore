@@ -1,0 +1,27 @@
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Python cache & environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+ENV/
+
+# Downloaded corpora (~4 GB) — regenerate with download_fast.py
+datasets/
+
+# Generated vector indexes & SQLite FTS5 DB (~260 MB; sindhi_faiss.bin exceeds GitHub 100 MB limit)
+# Regenerate locally via rag/build_lexicon_fts.py and rag/ingest_full_shah_jo_risalo.py
+rag/index/
+
+# Logs & OS files
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
